@@ -2,13 +2,8 @@ package rvt;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("AVL Tree (Balanced Binary Search Tree) Demonstration");
-        System.out.println("=====================================================\n");
+        Tree tree = new Tree();
 
-        AVLTree tree = new AVLTree();
-
-        // Insert elements
-        System.out.println("Inserting elements: 10, 20, 30, 40, 50, 25");
         tree.insert(10);
         tree.insert(20);
         tree.insert(30);
@@ -16,27 +11,18 @@ public class App {
         tree.insert(50);
         tree.insert(25);
 
-        System.out.println("\nIn-order traversal (sorted order):");
+        System.out.println("Inorder traversal of the constructed AVL tree is:");
         tree.inorderTraversal();
 
-        System.out.println("Pre-order traversal:");
+        System.out.println("Preorder traversal of the constructed AVL tree is:");
         tree.preorderTraversal();
 
-        System.out.println("Post-order traversal:");
+        System.out.println("Postorder traversal of the constructed AVL tree is:");
         tree.postorderTraversal();
 
-        System.out.println("\nTree height: " + tree.getHeight());
-
-        // Search operations
-        System.out.println("\nSearching for 25: " + tree.search(25));
-        System.out.println("Searching for 100: " + tree.search(100));
-
-        // Delete operations
-        System.out.println("\nDeleting element 40");
         tree.delete(40);
-        System.out.println("In-order traversal after deletion:");
-        tree.inorderTraversal();
 
-        System.out.println("Tree height after deletion: " + tree.getHeight());
+        System.out.println("Inorder traversal after deletion of 40:");
+        tree.inorderTraversal();
     }
 }

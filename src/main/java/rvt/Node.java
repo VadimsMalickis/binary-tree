@@ -1,15 +1,12 @@
 package rvt;
 
-/**
- * Represents a node in an AVL tree.
- */
-public class AVLNode {
+public class Node {
     int key;
     int height;
-    AVLNode left;
-    AVLNode right;
+    Node left;
+    Node right;
 
-    public AVLNode(int key) {
+    public Node(int key) {
         this.key = key;
         this.height = 1;
         this.left = null;
@@ -24,11 +21,11 @@ public class AVLNode {
         return height;
     }
 
-    public AVLNode getLeft() {
+    public Node getLeft() {
         return left;
     }
 
-    public AVLNode getRight() {
+    public Node getRight() {
         return right;
     }
 }
